@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+   
+
+    int pascal[8][15];
+
+    
+    for (int i = 0; i < 8; i++) {
+    for (int j = 0; j < 8; j++) {
+            pascal[i][j] = 0;
+}
+}
+
+
+    for (int i = 0; i < 8; i++) {
+     pascal[i][0] = 1; 
+     pascal[i][i] = 1; 
+
+    for (int j = 1; j < i; j++) {
+    pascal[i][j] = pascal[i - 1][j - 1] + pascal[i - 1][j];
+    }
+   }
+
+    
+for (int i = 0; i < 8; i++) {
+        
+  for (int space = 1; space < 8- i; space++) {
+    printf("  ");
+}
+
+        
+for (int k = 0; k <= i; k++) {
+printf("%2d  ", pascal[i][k]); }
+
+printf("\n");
+}
+
+    return 1;
+}
