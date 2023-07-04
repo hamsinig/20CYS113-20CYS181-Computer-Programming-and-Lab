@@ -1,0 +1,21 @@
+#include<stdio.h>
+struct complexno{
+int real;
+int complex;
+}no1,no2,result;
+
+
+int main(){
+printf("Please enter the real part of 1st number \n");
+scanf("%d",&no1.real);
+printf("Please enter the complex part of 1st number \n");
+scanf("%d",&no1.complex);
+printf("Please enter the real part of 1st number \n");
+scanf("%d",&no2.real);
+printf("Please enter the real part of 1st number \n");
+scanf("%d",&no2.complex);
+result.real=no1.real*no2.real;
+result.complex=no1.complex*no2.complex;
+printf("The multiplied result of the two complex numbers given as input is %d + %di",result.real,result.complex);
+return(1);
+}
