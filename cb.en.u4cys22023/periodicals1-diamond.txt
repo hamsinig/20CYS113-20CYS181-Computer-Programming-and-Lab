@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+
+int main() {
+    int n, i, j, k, space, num;
+    
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    
+    for (i = 1; i <= n; i++) {
+        space = 2 * (n - i);
+        num = 9;
+        
+        for (j = 1; j <= space; j++) {
+            printf(" ");
+        }
+        
+        for (k = 1; k <= 2 * (i - 1); k++) {
+            printf("%d ", num);
+            num--;
+        }
+        
+        printf("\n");
+    }
+    
+    for (i = n - 1; i >= 1; i--) {
+        space = 2 * (n - i);
+        num = 9;
+        
+        for (j = 1; j <= space; j++) {
+            printf(" ");
+        }
+        
+        for (k = 1; k <= 2 * i - 1; k++) {
+            printf("%d ", num);
+            num--;
+        }
+        
+        printf("\n");
+    }
+    
+    return 0;
+}

@@ -1,0 +1,39 @@
+#include<stdio.h>
+#define pi 3.14
+struct Shape{
+    union {
+        double radius;
+        double length;
+        
+    } dimensions;
+    enum typee{circle=1, rectangle=2};
+    
+};
+int main(){
+    struct Shape shape;
+    double area;
+    int input1;
+    printf("Enter the type of shape you want to calculate the area for. Type 1 for circle and 2 for rectangle \n");
+    scanf("%d",&input1);
+    
+     if(input1==1){
+         printf("Enter the radius of the circle \n");
+        scanf("%lf",&shape.dimensions.radius);
+       
+        area=3.14*shape.dimensions.radius*shape.dimensions.radius;
+        printf("The area of the circle is %lf \n ",area);}
+     else if (input1==2){  
+         int breadth;
+         scanf("%lf%d",&shape.dimensions.length,&breadth);
+        area=shape.dimensions.length*breadth;
+        printf("The area of the rectangle is %lf \n ",area);
+        
+    }
+    else{
+        printf("Invalid choice!");
+        
+    }
+    
+    
+}
+

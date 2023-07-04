@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int main() {
+    int inp1;
+    int inp2;
+    printf("Enter the two numbers between which you want to find all the prime numbers: ");
+    scanf("%d %d",&inp1,&inp2);
+    
+    printf("The prime numbers between %d and %d are: ",inp1,inp2);
+    
+    for(int i=inp1; i<=inp2; i++) {
+        int count = 0;
+        
+        for(int y=2; y<i; y++) {
+            if(i % y == 0) {
+                count++;
+                break; // Break out of the loop if the number is divisible by any other number
+            }
+        }
+        
+        if(count==0 && i>1) {
+            printf("%d ",i);
+        }
+    }
+    
+    return 0;
+}

@@ -1,0 +1,41 @@
+#include<stdio.h>
+
+void decimalToBinary(int q) {
+    int arr[20];
+    int w;
+    int y = 19;
+    
+    while(q > 0) {
+        w = q % 2;
+        arr[y] = w;
+        q = q / 2; // Divide by 2 to convert to binary
+        y = y - 1;
+    }
+    printf("The binary equivalent is: ");
+    for(int i = 19; i >= 0; i--) {
+        printf("%d", arr[i]);
+    }
+}
+
+void decimalToOctal(int q) {
+    printf(" The Octal equivalent is %o", q); // Use %o format specifier to print in octal
+}
+
+void decimalToHexadecimal(int q) {
+     printf("The Hexadecimal equivalent is %x", q); // Use %x format specifier to print in hexadecimal
+}
+
+int main() {
+    int input1;
+    printf("Enter a number equal to or above 0: ");
+    scanf("%d", &input1);
+    if(input1<0){
+        printf("Invalid Input!");
+    }
+    decimalToOctal(input1);
+    decimalToHexadecimal(input1);
+    decimalToBinary(input1);
+    
+    return 0;
+}
+
